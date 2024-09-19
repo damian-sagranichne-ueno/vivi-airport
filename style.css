@@ -171,3 +171,53 @@ body {
     /* Efecto al pasar el mouse, haciendo que el corte sea aún más drástico */
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
 }
+
+/* Estilos para el menú de hamburguesa */
+.menu {
+    display: none;
+    background-color: #43AA8C;
+    position: absolute;
+    top: 60px;
+    right: 0; /* Alineado a la derecha */
+    width: 200px;
+    padding: 20px;
+    border-left: 3px solid black;
+    text-align: left; /* Alinea los elementos a la izquierda */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.header .logo {
+    cursor: pointer;
+    position: relative;
+    padding-right: 40px; /* Añade espacio a la derecha del logo */
+}
+
+@media (max-width: 768px) {
+    .menu ul li a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        width: 150px; /* Más estrecho para pantallas pequeñas */
+    }
+}

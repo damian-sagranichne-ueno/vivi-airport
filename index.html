@@ -9,10 +9,19 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">Aeropuerto Vivi</div>
+            <div class="logo" id="menu-toggle">Aeropuerto Vivi &#9776;</div> <!-- Ícono de menú de hamburguesa -->
             <div class="flight-status">
                 Conocé el estado de tu vuelo:
             </div>
+        </div>
+
+        <!-- Menú desplegable oculto -->
+        <div class="menu" id="hamburger-menu">
+            <ul>
+                <li><a href="#salidas">Salidas</a></li>
+                <li><a href="#llegadas">Llegadas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </div>
 
         <div class="main">
@@ -37,8 +46,6 @@
                     </div>
                     <div class="info-content" id="info-content">
                         <!-- Example row -->
-                   
-                        
                     </div>
                 </div>
             </div>
@@ -46,6 +53,7 @@
 
         <div class="urgent">
             <div class="urgent-content">
+                <span class="urgent-icon">!</span>
                 <div>
                     <div class="urgent-title">Urgente:</div>
                     <div class="urgent-message">Ingresá y conocé los cambios de vuelo de último momento</div>
