@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #F7717C;
+    border-right: 7px solid black;
+    border-bottom: 7px solid black;
+    text-align: center;
+}
+
+.logo {
+    color: black;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.flight-status {
+    color: white;
+    font-size: 40px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(360deg, white 0%, #E5E7E6 100%);
+    padding: 20px;
+}
+
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab {
+    padding: 10px;
+    background-color: #43AA8C;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab.active, .tab:hover {
+    background-color: white;
+    color: black;
+}
+
+.flight-info {
+    background-color: #43AA8C;
+    padding: 10px;
+    border: 10px solid #43AA8C;
+    border-radius: 10px;
+}
+
+.info-header, .info-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px 0;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-row {
+    background-color: #F7717C;
+    color: black;
+}
+
+.urgent {
+    background-color: #FFED4D;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+.urgent-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.urgent-icon {
+    font-size: 100px;
+    margin-right: 20px;
+}
+
+.urgent-title {
+    font-size: 60px;
+}
+
+.urgent-message {
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    .header, .urgent-title, .urgent-message {
+        font-size: 30px;
+    }
+
+    .flight-status {
+        font-size: 25px;
+    }
+
+    .info-header, .info-row {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .urgent-title, .urgent-message {
+        font-size: 20px;
+    }
+
+    .flight-status {
+        font-size: 20px;
+    }
+
+    .info-header, .info-row {
+        font-size: 12px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.sidebar {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+    /* Corte más pronunciado en diagonal */
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    transition: clip-path 0.3s ease;
+}
+
+.sidebar img:hover {
+    /* Efecto al pasar el mouse, haciendo que el corte sea aún más drástico */
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
+}
